@@ -19,14 +19,18 @@ class FactorialTest {
 
 	static long factorial (int n) {
 
-		int i;
-		long result=1;
+		if (n < 0) {
 
-		for (i=1; i <= n; i++) {
-			result *= i;
+			return -1;
+
+		} else if ( n == 0) {
+
+			return 1;
+
+		} else {
+
+			return n*factorial(n-1);
+
 		}
-
-		return result;
 	}
-
 }
